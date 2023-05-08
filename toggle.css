@@ -1,0 +1,40 @@
+label{
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+input{
+    opacity: 0;
+}
+
+#toggle{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    border-radius: 34px;
+    transition-duration: 1s;
+}
+
+#toggle::before{
+    position: absolute;
+    height: 26px;
+    width: 26px;
+    left: 4.5px;
+    bottom: 4px;
+    background-color: gray;
+    border-radius: 50%;
+    transition-duration: 1s;
+}
+input:checked + #toggle::before{
+    transform: translateX(25px);
+}
+
+input:checked + #toggle{
+    background-color: white;
+    border-radius: 34px;
+}
